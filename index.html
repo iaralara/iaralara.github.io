@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Iara Lara — Desenvolvedora RPA & Engenharia de Automação</title>
-  <meta name="description" content="Portfólio profissional de Iara Lara. Especialista em automação de processos corporativos (RPA em Python) e desenvolvimento web Fullstack (React, TypeScript, Supabase).">
+  <title>Iara Lara — Engenheira de Automação RPA & Desenvolvedora Fullstack</title>
+  <meta name="description" content="Portfólio profissional de Iara Lara. Engenheira de Automação (RPA Python) e Desenvolvedora Web Fullstack (React, TypeScript, Supabase). Transformando complexidade operacional em soluções elegantes e seguras.">
   
-  <!-- Fontes Google -->
+  <!-- Fontes Google: Plus Jakarta Sans + Playfair Display (editorial refinado) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -20,21 +20,31 @@
         extend: {
           fontFamily: {
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
             mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
-            brand: {
-              50: '#f0fdf4',
-              100: '#dcfce7',
-              500: '#22c55e',
-              600: '#16a34a',
-              700: '#15803d',
+            roseGold: {
+              50: '#fff1f2',
+              100: '#ffe4e6',
+              200: '#fecdd3',
+              300: '#fda4af',
+              400: '#fb7185',
+              500: '#f43f5e',
+              600: '#e11d48',
+              700: '#be123c',
             },
-            dark: {
-              900: '#090d16',
-              800: '#0f172a',
-              700: '#1e293b',
-              600: '#334155',
+            blush: {
+              400: '#f472b6',
+              500: '#ec4899',
+              600: '#db2777',
+            },
+            berry: {
+              950: '#0c0714',
+              900: '#130b20',
+              800: '#1b102e',
+              700: '#281744',
+              600: '#3c2466',
             }
           }
         }
@@ -46,47 +56,82 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   
   <style>
-    .glow-effect {
-      background: radial-gradient(circle at 50% 0%, rgba(34, 197, 94, 0.15) 0%, rgba(9, 13, 22, 0) 70%);
+    /* Glow feminino suave em tons de Rosé, Orquídea e Champanhe */
+    .glow-rose {
+      background: radial-gradient(circle at 50% 0%, rgba(244, 63, 94, 0.18) 0%, rgba(219, 39, 119, 0.08) 35%, rgba(12, 7, 20, 0) 70%);
+    }
+    .glow-accent {
+      background: radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.12) 0%, rgba(12, 7, 20, 0) 50%);
     }
     .card-glass {
-      background: rgba(15, 23, 42, 0.75);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(27, 16, 46, 0.65);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(251, 113, 133, 0.12);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .card-glass:hover {
-      border-color: rgba(34, 197, 94, 0.35);
+      border-color: rgba(251, 113, 133, 0.4);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px -10px rgba(244, 63, 94, 0.18);
+    }
+    .gradient-text-rose {
+      background: linear-gradient(135deg, #fda4af 0%, #fb7185 50%, #f472b6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gradient-btn {
+      background: linear-gradient(135deg, #f43f5e 0%, #ec4899 50%, #d946ef 100%);
+    }
+    .gradient-btn:hover {
+      background: linear-gradient(135deg, #e11d48 0%, #db2777 50%, #c026d3 100%);
+    }
+    .badge-rose {
+      background: rgba(244, 63, 94, 0.1);
+      border: 1px solid rgba(251, 113, 133, 0.25);
+      color: #fda4af;
+    }
+    .avatar-glow {
+      box-shadow: 0 0 40px rgba(244, 63, 94, 0.3);
     }
   </style>
 </head>
-<body class="bg-dark-900 text-slate-200 font-sans selection:bg-brand-500 selection:text-white antialiased min-h-screen">
+<body class="bg-berry-950 text-slate-200 font-sans selection:bg-roseGold-500 selection:text-white antialiased min-h-screen relative overflow-x-hidden">
 
   <!-- ============================================================== -->
   <!-- NAVBAR -->
   <!-- ============================================================== -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-dark-900/80 backdrop-blur-md border-b border-slate-800/80">
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-berry-950/85 backdrop-blur-md border-b border-roseGold-500/10">
     <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-2 group">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-emerald-400 flex items-center justify-center font-bold text-dark-900 text-lg shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform">
-          IL
+      
+      <!-- Logo com monograma delicado -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="relative w-11 h-11 rounded-2xl p-[1.5px] bg-gradient-to-tr from-roseGold-500 via-blush-400 to-purple-400 group-hover:scale-105 transition-transform duration-300">
+          <div class="w-full h-full bg-berry-900 rounded-2xl flex items-center justify-center">
+            <span class="font-serif font-bold text-lg text-roseGold-200 tracking-tighter">IL</span>
+          </div>
         </div>
-        <span class="font-bold text-lg tracking-tight text-white group-hover:text-brand-400 transition-colors">Iara Lara</span>
+        <div class="flex flex-col">
+          <span class="font-bold text-base tracking-tight text-white group-hover:text-roseGold-300 transition-colors">Iara Lara</span>
+          <span class="text-[10px] font-medium tracking-widest uppercase text-roseGold-400/80">RPA & Fullstack</span>
+        </div>
       </a>
 
+      <!-- Menu links desktop -->
       <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-        <a href="#impacto" class="hover:text-brand-400 transition-colors">Impacto</a>
-        <a href="#projetos" class="hover:text-brand-400 transition-colors">Projetos</a>
-        <a href="#habilidades" class="hover:text-brand-400 transition-colors">Stack</a>
-        <a href="#trajetoria" class="hover:text-brand-400 transition-colors">Trajetória</a>
-        <a href="#contato" class="hover:text-brand-400 transition-colors">Contato</a>
+        <a href="#impacto" class="hover:text-roseGold-300 transition-colors">Impacto</a>
+        <a href="#projetos" class="hover:text-roseGold-300 transition-colors">Projetos</a>
+        <a href="#habilidades" class="hover:text-roseGold-300 transition-colors">Especialidades</a>
+        <a href="#trajetoria" class="hover:text-roseGold-300 transition-colors">Sobre Mim</a>
+        <a href="#contato" class="hover:text-roseGold-300 transition-colors">Contato</a>
       </div>
 
+      <!-- Ações rápidas -->
       <div class="flex items-center gap-3">
-        <a href="https://github.com/iaralara" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-lg border border-slate-700 bg-slate-800/50 hover:bg-slate-700/60 hover:text-white transition-all text-slate-300">
-          <i data-lucide="github" class="w-5 h-5"></i>
+        <a href="https://github.com/iaralara" target="_blank" rel="noopener noreferrer" title="GitHub" class="p-2.5 rounded-xl border border-roseGold-500/20 bg-berry-800/50 hover:bg-berry-700/60 hover:text-white text-roseGold-200 transition-all">
+          <i data-lucide="github" class="w-4 h-4"></i>
         </a>
-        <a href="https://www.linkedin.com/in/" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-brand-500 hover:bg-brand-600 text-dark-900 font-bold text-sm shadow-lg shadow-brand-500/25 transition-all">
-          <i data-lucide="linkedin" class="w-4 h-4"></i>
+        <a href="https://www.linkedin.com/in/" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl gradient-btn text-white font-bold text-xs tracking-wider uppercase shadow-lg shadow-roseGold-500/20 transition-all hover:scale-[1.02]">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
           LinkedIn
         </a>
       </div>
@@ -96,59 +141,100 @@
   <!-- ============================================================== -->
   <!-- HERO SECTION -->
   <!-- ============================================================== -->
-  <section class="relative pt-36 pb-20 px-6 glow-effect overflow-hidden">
+  <section class="relative pt-36 pb-20 px-6 glow-rose glow-accent overflow-hidden">
     <div class="max-w-6xl mx-auto">
-      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand-500/30 bg-brand-500/10 text-brand-400 text-xs font-semibold tracking-wide uppercase mb-6">
-        <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
-        Disponível para Projetos & Oportunidades
+      
+      <!-- Selo de disponibilidade -->
+      <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full badge-rose text-xs font-semibold tracking-wide mb-8">
+        <span class="w-2 h-2 rounded-full bg-roseGold-400 animate-ping"></span>
+        <span class="text-roseGold-200">Engenharia de Automação & Inovação com Propósito</span>
       </div>
 
-      <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white max-w-4xl leading-tight">
-        Automação de Processos (<span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">RPA Python</span>) & Aplicações Web de Alta Performance.
-      </h1>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Texto de Introdução -->
+        <div class="lg:col-span-8">
+          <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
+            Transformando rotinas complexas em soluções <span class="font-serif italic font-medium gradient-text-rose">elegantes, ágeis</span> e inteligentes.
+          </h1>
 
-      <p class="mt-6 text-lg sm:text-xl text-slate-400 max-w-2xl leading-relaxed">
-        Elimino gargalos operacionais e transformo rotinas manuais de finanças, ERPs e e-commerce em fluxos automatizados, seguros e 100% auditáveis.
-      </p>
+          <p class="mt-6 text-lg sm:text-xl text-slate-300/90 max-w-2xl leading-relaxed font-light">
+            Sou <strong class="text-roseGold-300 font-semibold">Iara Lara</strong>, especialista em <strong class="text-white">RPA em Python</strong> e desenvolvimento de <strong class="text-white">aplicações web modernas</strong>. Conecto precisão técnica, segurança rigorosa e visão de negócios para libertar pessoas de processos repetitivos.
+          </p>
 
-      <div class="mt-10 flex flex-wrap gap-4 items-center">
-        <a href="#projetos" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-dark-900 font-bold shadow-lg shadow-brand-500/25 hover:shadow-brand-500/40 transition-all">
-          <i data-lucide="layers" class="w-5 h-5"></i>
-          Explorar Projetos em Destaque
-        </a>
-        <a href="https://github.com/iaralara" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl border border-slate-700 bg-slate-800/60 hover:bg-slate-700 text-white font-semibold transition-all">
-          <i data-lucide="github" class="w-5 h-5"></i>
-          Ver no GitHub
-        </a>
+          <div class="mt-10 flex flex-wrap gap-4 items-center">
+            <a href="#projetos" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl gradient-btn text-white font-bold text-sm shadow-xl shadow-roseGold-500/25 transition-all hover:scale-[1.02]">
+              <i data-lucide="sparkles" class="w-4 h-4"></i>
+              Conhecer Meus Projetos
+            </a>
+            <a href="https://github.com/iaralara" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl border border-roseGold-500/25 bg-berry-800/60 hover:bg-berry-700/70 text-roseGold-200 font-semibold text-sm transition-all">
+              <i data-lucide="github" class="w-4 h-4"></i>
+              Ver Repositórios
+            </a>
+          </div>
+        </div>
+
+        <!-- Card de Perfil Destaque Feminino -->
+        <div class="lg:col-span-4 flex justify-center">
+          <div class="relative w-full max-w-sm rounded-3xl p-1 bg-gradient-to-b from-roseGold-400/40 via-blush-500/20 to-purple-500/10 avatar-glow">
+            <div class="bg-berry-900/90 rounded-[22px] p-6 text-center backdrop-blur-xl">
+              
+              <div class="relative mx-auto w-24 h-24 rounded-full p-1 bg-gradient-to-tr from-roseGold-500 via-blush-400 to-purple-400 mb-4">
+                <div class="w-full h-full rounded-full bg-berry-800 flex items-center justify-center font-serif text-3xl font-bold gradient-text-rose">
+                  IL
+                </div>
+              </div>
+
+              <h2 class="text-xl font-bold text-white tracking-tight">Iara Lara</h2>
+              <p class="text-xs text-roseGold-300 font-medium mt-1">RPA Engineer & Fullstack Developer</p>
+              
+              <div class="mt-4 pt-4 border-t border-roseGold-500/15 flex justify-center gap-2 text-xs text-slate-300">
+                <span class="px-2.5 py-1 rounded-full bg-roseGold-500/10 text-roseGold-200">📍 Brasil</span>
+                <span class="px-2.5 py-1 rounded-full bg-blush-500/10 text-blush-400">✨ Autonomia & Foco</span>
+              </div>
+
+              <p class="mt-4 text-xs text-slate-400 leading-relaxed italic">
+                "A tecnologia atinge seu ponto mais alto quando traduz processos complexos em tranquilidade e eficiência diária."
+              </p>
+            </div>
+          </div>
+        </div>
+
       </div>
+
     </div>
   </section>
 
   <!-- ============================================================== -->
-  <!-- METRICAS DE IMPACTO -->
+  <!-- METRICAS DE IMPACTO & VALOR -->
   <!-- ============================================================== -->
-  <section id="impacto" class="py-12 border-y border-slate-800/80 bg-slate-900/40 px-6">
+  <section id="impacto" class="py-14 border-y border-roseGold-500/10 bg-berry-900/40 px-6">
     <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      
       <div class="p-6 rounded-2xl card-glass">
-        <p class="text-3xl sm:text-4xl font-extrabold text-brand-400 tracking-tight">-97%</p>
-        <p class="text-xs sm:text-sm font-medium text-slate-400 mt-2">Tempo em Conciliação Bancária</p>
-        <span class="text-[11px] text-slate-500">De 3h/dia para 4 minutos</span>
+        <p class="text-3xl sm:text-4xl font-extrabold gradient-text-rose tracking-tight font-serif">-97%</p>
+        <p class="text-xs sm:text-sm font-semibold text-slate-200 mt-2">Tempo em Conciliações</p>
+        <span class="text-[11px] text-roseGold-300/80">De 3 horas para 4 minutos/dia</span>
       </div>
+
       <div class="p-6 rounded-2xl card-glass">
-        <p class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">+2.000h</p>
-        <p class="text-xs sm:text-sm font-medium text-slate-400 mt-2">Economia Anual de Esforço</p>
-        <span class="text-[11px] text-slate-500">Horas humanas redirecionadas</span>
+        <p class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight font-serif">+2.000h</p>
+        <p class="text-xs sm:text-sm font-semibold text-slate-200 mt-2">Horas Anuais Poupadas</p>
+        <span class="text-[11px] text-slate-400">Rotinas repetitivas automatizadas</span>
       </div>
+
       <div class="p-6 rounded-2xl card-glass">
-        <p class="text-3xl sm:text-4xl font-extrabold text-brand-400 tracking-tight">100%</p>
-        <p class="text-xs sm:text-sm font-medium text-slate-400 mt-2">Auditabilidade & LGPD</p>
-        <span class="text-[11px] text-slate-500">Isolamento rigoroso de chaves</span>
+        <p class="text-3xl sm:text-4xl font-extrabold gradient-text-rose tracking-tight font-serif">100%</p>
+        <p class="text-xs sm:text-sm font-semibold text-slate-200 mt-2">Segurança & LGPD</p>
+        <span class="text-[11px] text-roseGold-300/80">Zero exposição de chaves corporativas</span>
       </div>
+
       <div class="p-6 rounded-2xl card-glass">
-        <p class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">0%</p>
-        <p class="text-xs sm:text-sm font-medium text-slate-400 mt-2">Erros de Digitação Manual</p>
-        <span class="text-[11px] text-slate-500">Automação direta com validação</span>
+        <p class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight font-serif">0%</p>
+        <p class="text-xs sm:text-sm font-semibold text-slate-200 mt-2">Erros Manuais de Digitação</p>
+        <span class="text-[11px] text-slate-400">Auditoria cruzada com Pandas</span>
       </div>
+
     </div>
   </section>
 
@@ -157,138 +243,143 @@
   <!-- ============================================================== -->
   <section id="projetos" class="py-24 px-6 max-w-6xl mx-auto">
     <div class="mb-14">
-      <p class="text-brand-400 font-bold text-sm tracking-wider uppercase">Cases Reais & Código Aberto</p>
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Projetos em Destaque</h2>
-      <p class="text-slate-400 mt-3 max-w-xl">
-        Soluções projetadas para o mundo real, priorizando segurança, manutenibilidade e eficiência mensurável.
+      <div class="inline-flex items-center gap-2 text-roseGold-400 font-bold text-xs tracking-widest uppercase mb-2">
+        <i data-lucide="sparkle" class="w-3.5 h-3.5"></i>
+        Cases de Sucesso & Código Aberto
+      </div>
+      <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-1">Projetos em <span class="font-serif italic font-medium gradient-text-rose">Destaque</span></h2>
+      <p class="text-slate-300/80 mt-3 max-w-xl text-sm sm:text-base">
+        Arquiteturas projetadas com acabamento impecável, código modular e foco absoluto em resolver a dor do cliente.
       </p>
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
       
       <!-- PROJETO 1: RPA SUITE -->
-      <div class="rounded-3xl card-glass p-8 flex flex-col justify-between group transition-all duration-300">
+      <div class="rounded-3xl card-glass p-8 flex flex-col justify-between group">
         <div>
           <div class="flex items-center justify-between mb-6">
-            <span class="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold">
-              Python RPA • Corporativo
+            <span class="px-3.5 py-1.5 rounded-full bg-roseGold-500/15 border border-roseGold-500/30 text-roseGold-300 text-xs font-semibold flex items-center gap-1.5">
+              <i data-lucide="bot" class="w-3.5 h-3.5"></i>
+              Python RPA • Suíte Corporativa
             </span>
-            <a href="https://github.com/iaralara/robos-validados" target="_blank" rel="noopener noreferrer" class="text-slate-400 group-hover:text-white transition-colors">
-              <i data-lucide="external-link" class="w-5 h-5"></i>
+            <a href="https://github.com/iaralara/robos-validados" target="_blank" rel="noopener noreferrer" class="text-slate-400 group-hover:text-roseGold-300 transition-colors" title="Ver repositório">
+              <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
             </a>
           </div>
 
-          <h3 class="text-2xl font-bold text-white group-hover:text-brand-400 transition-colors">
+          <h3 class="text-2xl font-bold text-white group-hover:text-roseGold-300 transition-colors">
             Suíte de Automações RPA & Conciliação Financeira
           </h3>
           
-          <p class="text-slate-400 mt-4 text-sm leading-relaxed">
-            Arquitetura modular de robôs para automação bancária, fechamentos contábeis e auditoria cruzada de e-commerce:
+          <p class="text-slate-300 mt-4 text-sm leading-relaxed">
+            Ecossistema inteligente de robôs em Python projetados para automações bancárias, fechamentos contábeis e conferência de inventário multi-lojas:
           </p>
 
           <div class="mt-6 space-y-3">
             <div class="flex items-start gap-3">
-              <div class="p-1 rounded bg-brand-500/20 text-brand-400 mt-0.5">
-                <i data-lucide="check" class="w-3.5 h-3.5"></i>
+              <div class="p-1 rounded-lg bg-roseGold-500/20 text-roseGold-300 mt-0.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4"></i>
               </div>
-              <p class="text-xs text-slate-300"><strong>Conciliação Santander & Sicredi:</strong> Extração web e vínculo automático de extratos com a plataforma F360.</p>
+              <p class="text-xs text-slate-200"><strong>Conciliação Santander & Sicredi:</strong> Leitura e vínculo automático de extratos bancários com a plataforma financeira F360.</p>
             </div>
             <div class="flex items-start gap-3">
-              <div class="p-1 rounded bg-brand-500/20 text-brand-400 mt-0.5">
-                <i data-lucide="check" class="w-3.5 h-3.5"></i>
+              <div class="p-1 rounded-lg bg-roseGold-500/20 text-roseGold-300 mt-0.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4"></i>
               </div>
-              <p class="text-xs text-slate-300"><strong>Auditoria de E-commerce com Pandas:</strong> Cruzamento em lote de milhares de pedidos, comissões retidas e repasses.</p>
+              <p class="text-xs text-slate-200"><strong>Auditoria de E-commerce com Pandas:</strong> Cruzamento de milhares de pedidos, comissões retidas e repasses em segundos.</p>
             </div>
             <div class="flex items-start gap-3">
-              <div class="p-1 rounded bg-brand-500/20 text-brand-400 mt-0.5">
-                <i data-lucide="check" class="w-3.5 h-3.5"></i>
+              <div class="p-1 rounded-lg bg-roseGold-500/20 text-roseGold-300 mt-0.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4"></i>
               </div>
-              <p class="text-xs text-slate-300"><strong>Triagem Assíncrona IMAP:</strong> Classificação e arquivamento automatizado de e-mails de fechamento de caixa.</p>
+              <p class="text-xs text-slate-200"><strong>Triagem Assíncrona IMAP:</strong> Monitoramento e triagem de comprovantes de caixa e PIX sem intervenção humana.</p>
             </div>
             <div class="flex items-start gap-3">
-              <div class="p-1 rounded bg-brand-500/20 text-brand-400 mt-0.5">
-                <i data-lucide="check" class="w-3.5 h-3.5"></i>
+              <div class="p-1 rounded-lg bg-roseGold-500/20 text-roseGold-300 mt-0.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4"></i>
               </div>
-              <p class="text-xs text-slate-300"><strong>Reposição de Estoque Multi-Lojas:</strong> Cálculo algorítmico de balanceamento de grade entre matriz e filiais.</p>
+              <p class="text-xs text-slate-200"><strong>Reposição de Estoque Multi-Lojas:</strong> Algoritmo matemático de rateio de grade entre filiais de shopping e matriz.</p>
             </div>
           </div>
 
           <div class="mt-8 flex flex-wrap gap-2">
-            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs font-mono text-slate-300">Python 3.10+</span>
-            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs font-mono text-slate-300">Selenium</span>
-            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs font-mono text-slate-300">Pandas</span>
-            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs font-mono text-slate-300">Google Sheets API</span>
-            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs font-mono text-slate-300">IMAP/SMTP</span>
+            <span class="px-3 py-1 rounded-lg bg-berry-800 text-xs font-mono text-roseGold-200 border border-roseGold-500/15">Python 3.10+</span>
+            <span class="px-3 py-1 rounded-lg bg-berry-800 text-xs font-mono text-roseGold-200 border border-roseGold-500/15">Selenium</span>
+            <span class="px-3 py-1 rounded-lg bg-berry-800 text-xs font-mono text-roseGold-200 border border-roseGold-500/15">Pandas</span>
+            <span class="px-3 py-1 rounded-lg bg-berry-800 text-xs font-mono text-roseGold-200 border border-roseGold-500/15">Google Cloud API</span>
+            <span class="px-3 py-1 rounded-lg bg-berry-800 text-xs font-mono text-roseGold-200 border border-roseGold-500/15">IMAP/SMTP</span>
           </div>
         </div>
 
-        <div class="mt-8 pt-6 border-t border-slate-800 flex items-center justify-between">
-          <span class="text-xs text-slate-500">7 módulos de automação validados</span>
-          <a href="https://github.com/iaralara/robos-validados" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-400 hover:text-brand-300 transition-colors">
-            Ver Repositório Sanitizado <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        <div class="mt-8 pt-6 border-t border-roseGold-500/10 flex items-center justify-between">
+          <span class="text-xs text-slate-400">7 módulos auditados & blindados</span>
+          <a href="https://github.com/iaralara/robos-validados" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-roseGold-300 hover:text-roseGold-200 transition-colors">
+            Explorar Código <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
           </a>
         </div>
       </div>
 
       <!-- PROJETO 2: FINANÇASPRO -->
-      <div class="rounded-3xl card-glass p-8 flex flex-col justify-between group transition-all duration-300">
+      <div class="rounded-3xl card-glass p-8 flex flex-col justify-between group">
         <div>
           <div class="flex items-center justify-between mb-6">
-            <span class="px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 text-xs font-semibold">
-              Fullstack • React + Supabase
+            <span class="px-3.5 py-1.5 rounded-full bg-blush-500/15 border border-blush-500/30 text-blush-400 text-xs font-semibold flex items-center gap-1.5">
+              <i data-lucide="layout" class="w-3.5 h-3.5"></i>
+              Fullstack Moderno • React + Supabase
             </span>
-            <a href="https://github.com/iaralara/financas-pro" target="_blank" rel="noopener noreferrer" class="text-slate-400 group-hover:text-white transition-colors">
-              <i data-lucide="external-link" class="w-5 h-5"></i>
+            <a href="https://github.com/iaralara/financas-pro" target="_blank" rel="noopener noreferrer" class="text-slate-400 group-hover:text-blush-400 transition-colors" title="Ver repositório">
+              <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
             </a>
           </div>
 
-          <h3 class="text-2xl font-bold text-white group-hover:text-brand-400 transition-colors">
-            FinançasPro — Gestão & Consultor Financeiro
+          <h3 class="text-2xl font-bold text-white group-hover:text-blush-400 transition-colors">
+            FinançasPro — Gestão & Consultor Inteligente
           </h3>
           
-          <p class="text-slate-400 mt-4 text-sm leading-relaxed">
-            Mini aplicação web mobile-first de controle financeiro estratégico, planejamento orçamentário e consultoria automatizada:
+          <p class="text-slate-300 mt-4 text-sm leading-relaxed">
+            Mini aplicação web mobile-first voltada para saúde financeira, planejamento orçamentário e consultoria automatizada:
           </p>
 
           <div class="mt-6 space-y-3">
             <div class="flex items-start gap-3">
-              <div class="p-1 rounded bg-teal-500/20 text-teal-400 mt-0.5">
-                <i data-lucide="check" class="w-3.5 h-3.5"></i>
+              <div class="p-1 rounded-lg bg-blush-500/20 text-blush-400 mt-0.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4"></i>
               </div>
-              <p class="text-xs text-slate-300"><strong>Planejamento do Mês (Método 70/30):</strong> Teste de realidade interativo ("Primeiro decidir, depois gastar").</p>
+              <p class="text-xs text-slate-200"><strong>Método Orçamentário 70/30:</strong> Teste de realidade ("Primeiro decidir, depois gastar") com divisão visual por pilares.</p>
             </div>
             <div class="flex items-start gap-3">
-              <div class="p-1 rounded bg-teal-500/20 text-teal-400 mt-0.5">
-                <i data-lucide="check" class="w-3.5 h-3.5"></i>
+              <div class="p-1 rounded-lg bg-blush-500/20 text-blush-400 mt-0.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4"></i>
               </div>
-              <p class="text-xs text-slate-300"><strong>Lançamento por Áudio / Voz:</strong> Transcrição e extração semântica em Português do Brasil via Web Speech API.</p>
+              <p class="text-xs text-slate-200"><strong>Lançamento por Voz (Web Speech API):</strong> Transcrição e reconhecimento semântico em Português do Brasil em tempo real.</p>
             </div>
             <div class="flex items-start gap-3">
-              <div class="p-1 rounded bg-teal-500/20 text-teal-400 mt-0.5">
-                <i data-lucide="check" class="w-3.5 h-3.5"></i>
+              <div class="p-1 rounded-lg bg-blush-500/20 text-blush-400 mt-0.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4"></i>
               </div>
-              <p class="text-xs text-slate-300"><strong>Controle de Parcelas & Amortização:</strong> Visão clara de fluxo futuro sem duplicação de caixa.</p>
+              <p class="text-xs text-slate-200"><strong>Amortização & Gestão de Parcelas:</strong> Projeção de fluxo de caixa futuro sem duplicação de saldo.</p>
             </div>
             <div class="flex items-start gap-3">
-              <div class="p-1 rounded bg-teal-500/20 text-teal-400 mt-0.5">
-                <i data-lucide="check" class="w-3.5 h-3.5"></i>
+              <div class="p-1 rounded-lg bg-blush-500/20 text-blush-400 mt-0.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4"></i>
               </div>
-              <p class="text-xs text-slate-300"><strong>Supabase com RLS & Modo Offline:</strong> Isolamento por usuário em nuvem com fallback para LocalStorage.</p>
+              <p class="text-xs text-slate-200"><strong>Supabase com RLS & Modo Offline:</strong> Segurança máxima com fallback automático em LocalStorage.</p>
             </div>
           </div>
 
           <div class="mt-8 flex flex-wrap gap-2">
-            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs font-mono text-slate-300">React 19</span>
-            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs font-mono text-slate-300">TypeScript</span>
-            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs font-mono text-slate-300">Tailwind CSS</span>
-            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs font-mono text-slate-300">Supabase RLS</span>
-            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs font-mono text-slate-300">Web Speech API</span>
+            <span class="px-3 py-1 rounded-lg bg-berry-800 text-xs font-mono text-blush-300 border border-blush-500/15">React 19</span>
+            <span class="px-3 py-1 rounded-lg bg-berry-800 text-xs font-mono text-blush-300 border border-blush-500/15">TypeScript</span>
+            <span class="px-3 py-1 rounded-lg bg-berry-800 text-xs font-mono text-blush-300 border border-blush-500/15">Tailwind CSS</span>
+            <span class="px-3 py-1 rounded-lg bg-berry-800 text-xs font-mono text-blush-300 border border-blush-500/15">Supabase RLS</span>
+            <span class="px-3 py-1 rounded-lg bg-berry-800 text-xs font-mono text-blush-300 border border-blush-500/15">Web Speech</span>
           </div>
         </div>
 
-        <div class="mt-8 pt-6 border-t border-slate-800 flex items-center justify-between">
-          <span class="text-xs text-slate-500">Mobile-First & PWA Ready</span>
-          <a href="https://github.com/iaralara/financas-pro" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-teal-400 hover:text-teal-300 transition-colors">
+        <div class="mt-8 pt-6 border-t border-roseGold-500/10 flex items-center justify-between">
+          <span class="text-xs text-slate-400">Mobile-First & Responsivo</span>
+          <a href="https://github.com/iaralara/financas-pro" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-blush-400 hover:text-blush-300 transition-colors">
             Ver Repositório & Demo <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
           </a>
         </div>
@@ -298,59 +389,65 @@
   </section>
 
   <!-- ============================================================== -->
-  <!-- HABILIDADES & STACK TECNOLOGICA -->
+  <!-- HABILIDADES & ESPECIALIDADES -->
   <!-- ============================================================== -->
-  <section id="habilidades" class="py-20 px-6 bg-slate-900/30 border-t border-slate-800/80">
+  <section id="habilidades" class="py-20 px-6 bg-berry-900/30 border-t border-roseGold-500/10">
     <div class="max-w-6xl mx-auto">
       <div class="text-center max-w-xl mx-auto mb-14">
-        <p class="text-brand-400 font-bold text-sm tracking-wider uppercase">Conhecimento Prático</p>
-        <h2 class="text-3xl font-extrabold text-white mt-2">Tecnologias & Habilidades</h2>
+        <div class="inline-flex items-center gap-2 text-roseGold-400 font-bold text-xs tracking-widest uppercase mb-2">
+          <i data-lucide="cpu" class="w-3.5 h-3.5"></i>
+          Competências & Ferramentas
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Minhas <span class="font-serif italic font-medium gradient-text-rose">Especialidades</span></h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         
-        <div class="p-6 rounded-2xl card-glass">
-          <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center mb-4">
+        <!-- CARD 1 -->
+        <div class="p-7 rounded-2xl card-glass">
+          <div class="w-12 h-12 rounded-2xl bg-roseGold-500/15 text-roseGold-400 flex items-center justify-center mb-5 border border-roseGold-500/20">
             <i data-lucide="bot" class="w-6 h-6"></i>
           </div>
-          <h3 class="text-lg font-bold text-white">RPA & Automação</h3>
-          <p class="text-slate-400 text-xs mt-2">Soluções para integração e robôs corporativos:</p>
-          <ul class="mt-4 space-y-2 text-xs text-slate-300">
-            <li>• Selenium WebDriver & Automação Web</li>
-            <li>• Manipulação e Auditoria com Pandas</li>
-            <li>• Google Sheets & Drive API (Service Accounts)</li>
-            <li>• Protocolos IMAP (Leitura) & SMTP (Disparo)</li>
-            <li>• Extração de dados de ERPs e Portais Bancários</li>
+          <h3 class="text-lg font-bold text-white">RPA & Automação Inteligente</h3>
+          <p class="text-slate-300/80 text-xs mt-2">Construção de robôs resilientes para operações de alto volume:</p>
+          <ul class="mt-4 space-y-2.5 text-xs text-slate-300">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-roseGold-400"></span>Selenium WebDriver & Automação Web</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-roseGold-400"></span>Manipulação & Limpeza de Dados com Pandas</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-roseGold-400"></span>Google Sheets & Drive APIs (Service Accounts)</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-roseGold-400"></span>Protocolos Seguros IMAP (Leitura) & SMTP</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-roseGold-400"></span>Integração com ERP Cigam & Portais Bancários</li>
           </ul>
         </div>
 
-        <div class="p-6 rounded-2xl card-glass">
-          <div class="w-12 h-12 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center mb-4">
-            <i data-lucide="code-2" class="w-6 h-6"></i>
+        <!-- CARD 2 -->
+        <div class="p-7 rounded-2xl card-glass">
+          <div class="w-12 h-12 rounded-2xl bg-blush-500/15 text-blush-400 flex items-center justify-center mb-5 border border-blush-500/20">
+            <i data-lucide="sparkles" class="w-6 h-6"></i>
           </div>
-          <h3 class="text-lg font-bold text-white">Frontend & Web Moderno</h3>
-          <p class="text-slate-400 text-xs mt-2">Construção de interfaces de alta responsividade:</p>
-          <ul class="mt-4 space-y-2 text-xs text-slate-300">
-            <li>• React 19 + TypeScript</li>
-            <li>• Vite & Tailwind CSS</li>
-            <li>• Recharts & Dashboards de Métricas</li>
-            <li>• Web Speech API (Voz para Texto)</li>
-            <li>• Layout Mobile-First & Arquitetura por Componentes</li>
+          <h3 class="text-lg font-bold text-white">Frontend Elegante & Moderno</h3>
+          <p class="text-slate-300/80 text-xs mt-2">Criação de interfaces que encantam e facilitam o dia a dia:</p>
+          <ul class="mt-4 space-y-2.5 text-xs text-slate-300">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blush-400"></span>React 19 + TypeScript (Tipagem Estrita)</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blush-400"></span>Tailwind CSS & Design System Editorial</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blush-400"></span>Dashboards Financeiros com Recharts</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blush-400"></span>Web Speech API (Reconhecimento de Voz)</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blush-400"></span>UX/UI Mobile-First & Micro-Interações</li>
           </ul>
         </div>
 
-        <div class="p-6 rounded-2xl card-glass">
-          <div class="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center mb-4">
+        <!-- CARD 3 -->
+        <div class="p-7 rounded-2xl card-glass">
+          <div class="w-12 h-12 rounded-2xl bg-purple-500/15 text-purple-400 flex items-center justify-center mb-5 border border-purple-500/20">
             <i data-lucide="shield-check" class="w-6 h-6"></i>
           </div>
-          <h3 class="text-lg font-bold text-white">Segurança & Backend</h3>
-          <p class="text-slate-400 text-xs mt-2">Bancos de dados e governança de informação:</p>
-          <ul class="mt-4 space-y-2 text-xs text-slate-300">
-            <li>• Supabase com Row Level Security (RLS)</li>
-            <li>• PostgreSQL & Modelagem Relacional</li>
-            <li>• Isolamento de Credenciais (.env) & LGPD</li>
-            <li>• Controle de Versão com Git & GitHub</li>
-            <li>• Estruturação de APIs REST & JSON</li>
+          <h3 class="text-lg font-bold text-white">Governança & Segurança</h3>
+          <p class="text-slate-300/80 text-xs mt-2">Padrões rígidos para proteção de dados corporativos:</p>
+          <ul class="mt-4 space-y-2.5 text-xs text-slate-300">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>Supabase com Row Level Security (RLS)</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>Isolamento Rigoroso de Credenciais (.env)</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>Conformidade com a LGPD e Sigilo Comercial</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>Controle de Versão Git & GitHub Organizado</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>Tratamento de Exceções & Logs Estruturados</li>
           </ul>
         </div>
 
@@ -359,60 +456,72 @@
   </section>
 
   <!-- ============================================================== -->
-  <!-- TRAJETORIA -->
+  <!-- TRAJETÓRIA & PROPÓSITO -->
   <!-- ============================================================== -->
   <section id="trajetoria" class="py-24 px-6 max-w-4xl mx-auto">
-    <div class="mb-10">
-      <p class="text-brand-400 font-bold text-sm tracking-wider uppercase">História & Foco</p>
-      <h2 class="text-3xl font-extrabold text-white mt-2">Minha Trajetória</h2>
+    <div class="mb-10 text-center">
+      <div class="inline-flex items-center gap-2 text-roseGold-400 font-bold text-xs tracking-widest uppercase mb-2">
+        <i data-lucide="heart" class="w-3.5 h-3.5 text-roseGold-400"></i>
+        Propósito & Visão
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Minha <span class="font-serif italic font-medium gradient-text-rose">Trajetória</span></h2>
     </div>
 
-    <div class="card-glass p-8 rounded-3xl space-y-6 text-slate-300 text-sm leading-relaxed">
+    <div class="card-glass p-8 sm:p-10 rounded-3xl space-y-6 text-slate-300 text-sm sm:text-base leading-relaxed">
       <p>
-        Minha jornada na tecnologia é impulsionada por um objetivo claro: <strong>resolver problemas reais que tomam tempo e energia das pessoas nas empresas</strong>.
+        Acredito que a tecnologia deve ser um instrumento de <strong>liberdade e tranquilidade</strong> para as pessoas. Minha jornada na programação nasceu do contato direto com o dia a dia de operações de varejo e gestão financeira.
       </p>
       <p>
-        Atuando diretamente no ecossistema operacional de finanças e varejo, identifiquei de perto o custo oculto de tarefas manuais: conciliações bancárias exaustivas, cruzamento de planilhas de pedidos com milhares de linhas e transferências manuais de arquivos entre e-mails e ERPs.
+        Ver equipes talentosas perderem horas preciosas digitando planilhas manuais, conferindo extratos bancários linha a linha ou fazendo transferências repetitivas de arquivos sempre me provocou um desejo de transformar essa realidade.
       </p>
       <p>
-        Foi dessa vivência que nasceu meu foco em <strong>Engenharia de Automação (RPA)</strong>. Em vez de apenas escrever código, desenvolvo soluções com mentalidade de negócio: redução de prazos operacionais, blindagem contra erros de digitação e tratamento rigoroso da segurança e privacidade de dados (LGPD).
+        Foi dessa inquietação que consolidei minha atuação em <strong>Engenharia de Automação (RPA)</strong>. Meus robôs não são apenas linhas de script — são ferramentas que trazem previsibilidade, reduzem o estresse das equipes de fechamento e garantem que as informações cheguem à liderança sem atrasos nem erros.
       </p>
       <p>
-        Complemento essa atuação com o <strong>desenvolvimento Fullstack moderno</strong>, criando ferramentas e dashboards intuitivos que transformam dados brutos em decisões financeiras estratégicas para a liderança.
+        Aliando essa expertise ao <strong>desenvolvimento Fullstack com React e Supabase</strong>, crio pontes completas: da extração profunda de dados até a experiência visual moderna que o usuário final adora usar.
       </p>
     </div>
   </section>
 
   <!-- ============================================================== -->
-  <!-- CONTATO & CTA -->
+  <!-- CONTATO & CONEXÃO -->
   <!-- ============================================================== -->
-  <section id="contato" class="py-20 px-6 border-t border-slate-800 bg-slate-900/50">
+  <section id="contato" class="py-24 px-6 border-t border-roseGold-500/10 bg-berry-900/50">
     <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Vamos Conversar?</h2>
-      <p class="text-slate-400 mt-4 max-w-md mx-auto text-sm">
-        Estou aberta a oportunidades profissionais, contratações e projetos de automação de alto impacto.
+      
+      <div class="inline-flex p-3 rounded-2xl bg-roseGold-500/15 text-roseGold-300 mb-6">
+        <i data-lucide="message-circle" class="w-7 h-7"></i>
+      </div>
+
+      <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Vamos construir algo <span class="font-serif italic font-medium gradient-text-rose">incrível</span> juntas?</h2>
+      
+      <p class="text-slate-300/80 mt-4 max-w-lg mx-auto text-sm sm:text-base leading-relaxed">
+        Estou aberta a oportunidades profissionais, desafios em automação RPA e projetos inovadores. Fique à vontade para me mandar uma mensagem!
       </p>
 
-      <div class="mt-8 flex flex-wrap justify-center gap-4">
-        <a href="mailto:iaralara1812@gmail.com" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-dark-900 font-bold shadow-lg shadow-brand-500/25 transition-all">
-          <i data-lucide="mail" class="w-5 h-5"></i>
+      <div class="mt-10 flex flex-wrap justify-center gap-4">
+        <a href="mailto:iaralara1812@gmail.com" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl gradient-btn text-white font-bold text-sm shadow-xl shadow-roseGold-500/25 transition-all hover:scale-[1.02]">
+          <i data-lucide="mail" class="w-4 h-4"></i>
           iaralara1812@gmail.com
         </a>
-        <a href="https://github.com/iaralara" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl border border-slate-700 bg-slate-800/80 hover:bg-slate-700 text-white font-semibold transition-all">
-          <i data-lucide="github" class="w-5 h-5"></i>
-          GitHub
-        </a>
-        <a href="https://www.linkedin.com/in/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl border border-slate-700 bg-slate-800/80 hover:bg-slate-700 text-white font-semibold transition-all">
-          <i data-lucide="linkedin" class="w-5 h-5"></i>
+        <a href="https://www.linkedin.com/in/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl border border-roseGold-500/25 bg-berry-800/80 hover:bg-berry-700 text-roseGold-200 font-semibold text-sm transition-all">
+          <i data-lucide="linkedin" class="w-4 h-4"></i>
           LinkedIn
         </a>
+        <a href="https://github.com/iaralara" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl border border-roseGold-500/25 bg-berry-800/80 hover:bg-berry-700 text-roseGold-200 font-semibold text-sm transition-all">
+          <i data-lucide="github" class="w-4 h-4"></i>
+          GitHub
+        </a>
       </div>
+
     </div>
   </section>
 
+  <!-- ============================================================== -->
   <!-- FOOTER -->
-  <footer class="py-8 border-t border-slate-800/80 text-center text-xs text-slate-500">
-    <p>© 2026 Iara Lara. Desenvolvido com foco em excelência técnica e impacto de negócios.</p>
+  <!-- ============================================================== -->
+  <footer class="py-8 border-t border-roseGold-500/10 text-center text-xs text-roseGold-300/50">
+    <p>© 2026 Iara Lara • Desenvolvido com elegância, precisão técnica e propósito.</p>
   </footer>
 
   <script>
